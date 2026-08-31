@@ -12,7 +12,7 @@ Public release metadata and the production static release site for GameLauncher.
 ```powershell
 node tools/validate-site.mjs
 ./command/Publish-StaticReleaseSite.ps1 -Action Build
-node tools/serve.mjs ..\..\release\gamelaucher_web\release 4173
+node tools/serve.mjs ..\..\release\gamelauncher_web\release 4173
 ```
 
 ## Deployment

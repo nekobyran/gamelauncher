@@ -3,7 +3,7 @@
   "projectSlug": "gamelauncher",
   "customDomain": "gamelauncher.nkbr.cc",
   "pagesProject": "nkbr-gamelauncher",
-  "githubRepo": "nekobyran/gamelaucher",
+  "githubRepo": "nekobyran/gamelauncher",
   "productionBranch": "main",
-  "outputDirectory": "release/gamelaucher_web/release"
+  "outputDirectory": "release/gamelauncher_web/release"
 }

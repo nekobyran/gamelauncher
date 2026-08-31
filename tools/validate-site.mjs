@@ -34,7 +34,7 @@ const buildScript = await readFile(resolve(root, 'tools/build-site.mjs'), 'utf8'
 check(/^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/.test(config.projectSlug), 'projectSlug must be a valid DNS label');
 check(config.customDomain === `${config.projectSlug}.nkbr.cc`, 'customDomain must equal <projectSlug>.nkbr.cc');
 check(config.pagesProject === `nkbr-${config.projectSlug}`, 'pagesProject must equal nkbr-<projectSlug>');
-check(config.githubRepo === 'nekobyran/gamelaucher', 'unexpected githubRepo');
+check(config.githubRepo === 'nekobyran/gamelauncher', 'unexpected githubRepo');
 check(config.productionBranch === 'main', 'productionBranch must be main');
 check(release.schemaVersion === 1, 'release schemaVersion must be 1');
 check(Array.isArray(release.platforms) && release.platforms.length === 2, 'release must expose exactly Windows and Android builds');
@@ -46,7 +46,7 @@ for (const platform of release.platforms) {
   check(/^[A-F0-9]{64}$/.test(platform.sha256), `${platform.id}: source release SHA-256 is invalid`);
   check(
     typeof platform.downloadUrl === 'string'
-      && platform.downloadUrl.startsWith('https://github.com/nekobyran/gamelaucher/releases/download/'),
+      && platform.downloadUrl.startsWith('https://github.com/nekobyran/gamelauncher/releases/download/'),
     `${platform.id}: source release asset URL is invalid`,
   );
   check(
@@ -55,7 +55,7 @@ for (const platform of release.platforms) {
   );
   check(Array.isArray(platform.installSteps) && platform.installSteps.length >= 3, `${platform.id}: installSteps incomplete`);
 }
-check(release.release.releasePageUrl.startsWith('https://github.com/nekobyran/gamelaucher/releases/tag/'), 'source release page must target a published tag');
+check(release.release.releasePageUrl.startsWith('https://github.com/nekobyran/gamelauncher/releases/tag/'), 'source release page must target a published tag');
 check(release.release.discovery === 'source-pinned-public-release', 'source release fallback contract is missing');
 
 for (const id of ['starfield', 'motionToggle', 'release', 'scope', 'platformChecksum']) {
@@ -68,7 +68,7 @@ for (const forbidden of ['PRIVATE PREVIEW', 'PUBLIC PREVIEW', 'Public Preview', 
   check(!html.includes(forbidden) && !js.includes(forbidden), `internal preview/testing marker remains: ${forbidden}`);
 }
 check(html.includes('LICENSE NOT DECLARED'), 'license boundary is missing');
-check(html.includes('https://github.com/nekobyran/gamelaucher'), 'public repository link is missing');
+check(html.includes('https://github.com/nekobyran/gamelauncher'), 'public repository link is missing');
 check(html.includes('<meta name="theme-color" content="#edf4df">') && html.includes('<meta name="color-scheme" content="light">'), 'paper-white browser chrome metadata is missing');
 check(html.includes('GameLauncher · Release Portal') && !html.includes('Public Preview'), 'formal release portal title is missing');
 check(js.includes('visibilitychange'), 'animation must pause when the page is hidden');

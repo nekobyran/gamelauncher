@@ -4,5 +4,5 @@
   "compatibility_date": "2026-07-28",
   "workers_dev": false,
   "routes": [{"pattern":"gamelauncher.nkbr.cc","custom_domain":true}],
-  "assets": {"directory":"../../release/gamelaucher_web/release","binding":"ASSETS","run_worker_first":true,"html_handling":"auto-trailing-slash","not_found_handling":"404-page"}
+  "assets": {"directory":"../../release/gamelauncher_web/release","binding":"ASSETS","run_worker_first":true,"html_handling":"auto-trailing-slash","not_found_handling":"404-page"}
 }

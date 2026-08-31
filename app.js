@@ -191,13 +191,13 @@
     state.motion = enabled && !reducedMotion.matches && !saveData;
     document.body.classList.toggle('motion-off', !state.motion);
     $('#motionToggle')?.setAttribute('aria-pressed', String(!state.motion));
-    try { localStorage.setItem('gamelaucher-motion', state.motion ? 'on' : 'off'); } catch {}
-    dispatchEvent(new CustomEvent('gamelaucher:motion', { detail: state.motion }));
+    try { localStorage.setItem('gamelauncher-motion', state.motion ? 'on' : 'off'); } catch {}
+    dispatchEvent(new CustomEvent('gamelauncher:motion', { detail: state.motion }));
   }
 
   function setupMotionControl() {
     let stored = null;
-    try { stored = localStorage.getItem('gamelaucher-motion'); } catch {}
+    try { stored = localStorage.getItem('gamelauncher-motion'); } catch {}
     setMotion(stored !== 'off');
     $('#motionToggle')?.addEventListener('click', () => setMotion(!state.motion));
     reducedMotion.addEventListener('change', () => setMotion(state.motion));
@@ -275,7 +275,7 @@
       running = !document.hidden;
       previousTime = performance.now();
     });
-    addEventListener('gamelaucher:motion', (event) => {
+    addEventListener('gamelauncher:motion', (event) => {
       if (!event.detail) context.clearRect(0, 0, width, height);
       previousTime = performance.now();
     });

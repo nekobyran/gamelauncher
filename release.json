@@ -8,7 +8,7 @@
     "channel": "Public Prerelease",
     "publishedAt": "2026-07-28",
     "visibility": "public",
-    "releasePageUrl": "https://github.com/nekobyran/gamelaucher/releases/tag/v1.1.0-preview.1",
+    "releasePageUrl": "https://github.com/nekobyran/gamelauncher/releases/tag/v1.1.0-preview.1",
     "discovery": "source-pinned-public-release",
     "accessNotice": "公开发布；下载后请先核对 SHA-256。"
   },
@@ -23,7 +23,7 @@
       "architecture": "x86_64",
       "packageType": "CURRENT-USER SETUP",
       "sha256": "F5A522585682EE9CE6B61BCB1DA2A8DB02C1BF53177991FD7E7B5AD9F0A11DC5",
-      "downloadUrl": "https://github.com/nekobyran/gamelaucher/releases/download/v1.1.0-preview.1/GameLauncher-1.1.0-preview.1-windows-x64-setup.exe",
+      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0-preview.1/GameLauncher-1.1.0-preview.1-windows-x64-setup.exe",
       "actionLabel": "获取 Windows 版本",
       "installSteps": [
         "下载当前用户安装包并核对 SHA-256",
@@ -40,11 +40,11 @@
       "shortLabel": "Android",
       "title": "Android ARM64",
       "statusLabel": "AUTHORIZED RELEASE",
-      "fileName": "gamelaucher-android-stable.apk",
+      "fileName": "gamelauncher-android-stable.apk",
       "architecture": "arm64-v8a",
       "packageType": "THIN LAUNCHER APK",
       "sha256": "32DDA3ADDCB639B34F5548A80E5409A0FAA70F2535B7E8F65A46F78A5CC70DB2",
-      "downloadUrl": "https://github.com/nekobyran/gamelaucher/releases/download/v1.1.0-preview.1/gamelaucher-android-stable.apk",
+      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0-preview.1/gamelauncher-android-stable.apk",
       "actionLabel": "获取 Android 版本",
       "installSteps": [
         "下载 ARM64 APK 并核对 SHA-256",

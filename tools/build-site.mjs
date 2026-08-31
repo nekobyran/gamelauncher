@@ -29,6 +29,8 @@ function parseDigest(asset) {
 function selectAsset(assets, platform) {
   const patterns = platform === 'windows'
     ? [
+        /(?:windows|win)[-_ .]*(?:x64|x86_64).*?portable.*?\.tar\.zst$/iu,
+        /(?:windows|win).*?(?:x64|x86_64).*?\.tar\.zst$/iu,
         /(?:windows|win)[-_ .]*(?:x64|x86_64).*?(?:setup|installer).*?\.exe$/iu,
         /(?:setup|installer).*?(?:windows|win).*?(?:x64|x86_64).*?\.exe$/iu,
         /(?:windows|win).*?(?:x64|x86_64).*?\.exe$/iu,

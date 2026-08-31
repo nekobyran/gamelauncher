@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "release": {
     "productName": "GameLauncher",
-    "displayName": "GameLauncher 1.1.0-preview.1",
-    "version": "1.1.0-preview.1",
+    "displayName": "GameLauncher 1.1.0",
+    "version": "1.1.0",
     "sequence": "AUTO",
-    "channel": "Public Prerelease",
-    "publishedAt": "2026-07-28",
+    "channel": "Public Release",
+    "publishedAt": "2026-08-31",
     "visibility": "public",
-    "releasePageUrl": "https://github.com/nekobyran/gamelauncher/releases/tag/v1.1.0-preview.1",
+    "releasePageUrl": "https://github.com/nekobyran/gamelauncher/releases/tag/v1.1.0",
     "discovery": "source-pinned-public-release",
     "accessNotice": "公开发布；下载后请先核对 SHA-256。"
   },
@@ -17,21 +17,22 @@
       "id": "windows",
       "glyph": "W",
       "shortLabel": "Windows",
-      "title": "Windows x64 安装版",
+      "title": "Windows x64 便携版",
       "statusLabel": "AUTHORIZED RELEASE",
-      "fileName": "GameLauncher-1.1.0-preview.1-windows-x64-setup.exe",
+      "fileName": "GameLauncher-1.1.0-windows-x64-portable.tar.zst",
       "architecture": "x86_64",
-      "packageType": "CURRENT-USER SETUP",
-      "sha256": "F5A522585682EE9CE6B61BCB1DA2A8DB02C1BF53177991FD7E7B5AD9F0A11DC5",
-      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0-preview.1/GameLauncher-1.1.0-preview.1-windows-x64-setup.exe",
+      "packageType": "PORTABLE TAR.ZST",
+      "sha256": "4E396D0EB1E97542D19DEB58F019EF39F825F1630A452F229EADBE071DCD27DA",
+      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0/GameLauncher-1.1.0-windows-x64-portable.tar.zst",
       "actionLabel": "获取 Windows 版本",
       "installSteps": [
-        "下载当前用户安装包并核对 SHA-256",
-        "运行安装包；不需要管理员权限",
-        "首次启动选择所需引擎，下载在主页后台继续"
+        "下载 Windows x64 便携归档并核对 SHA-256",
+        "使用支持 Zstandard 的解压工具完整解压 tar.zst",
+        "从解压目录启动 GameLauncher；首次启动按需下载所需引擎"
       ],
       "limitations": [
-        "安装包未使用受信任 Authenticode 证书，SmartScreen 可能警告"
+        "正式 Windows 版本当前提供便携归档，不提供安装程序",
+        "归档包含已验证的官方 Android Emulator 运行时，不包含 Wine、游戏或引擎包"
       ]
     },
     {
@@ -43,8 +44,8 @@
       "fileName": "gamelauncher-android-stable.apk",
       "architecture": "arm64-v8a",
       "packageType": "THIN LAUNCHER APK",
-      "sha256": "32DDA3ADDCB639B34F5548A80E5409A0FAA70F2535B7E8F65A46F78A5CC70DB2",
-      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0-preview.1/gamelauncher-android-stable.apk",
+      "sha256": "4F283540B6518BAD2A9CCDD7AE8A0B6C9104B21C9C6698DB71EEDAAEF45973B7",
+      "downloadUrl": "https://github.com/nekobyran/gamelauncher/releases/download/v1.1.0/gamelauncher-android-stable.apk",
       "actionLabel": "获取 Android 版本",
       "installSteps": [
         "下载 ARM64 APK 并核对 SHA-256",
@@ -52,7 +53,7 @@
         "首次启动选择引擎；引擎文件按 ABI 后台下载"
       ],
       "limitations": [
-        "Android 可用引擎范围以当前 GitHub Release 说明为准"
+        "当前正式 APK 为 arm64-v8a thin-shell；运行时组件按设备 ABI 与引擎需求下载"
       ]
     }
   ]

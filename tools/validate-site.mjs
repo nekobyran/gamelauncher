@@ -64,7 +64,7 @@ for (const id of ['starfield', 'motionToggle', 'release', 'scope', 'platformChec
 check(html.includes('aria-live="polite"'), 'live release status missing');
 check(!/<script[^>]+src=["']https?:/i.test(html), 'remote scripts are forbidden');
 check(!/<link[^>]+href=["']https?:/i.test(html), 'remote styles and fonts are forbidden');
-for (const forbidden of ['PRIVATE PREVIEW', 'PUBLIC PREVIEW', 'Public Preview', '公开预览版', 'READY FOR INVITED TESTERS', 'verifiedList', 'pendingList', 'smoke', '受邀测试者']) {
+for (const forbidden of ['PRIVATE PREVIEW', 'PUBLIC PREVIEW', 'Public Preview', '公开预览版', 'PRIVATE RELEASE', '仅向已授权仓库成员开放', '仓库仅对授权协作者开放', 'READY FOR INVITED TESTERS', 'verifiedList', 'pendingList', 'smoke', '受邀测试者']) {
   check(!html.includes(forbidden) && !js.includes(forbidden), `internal preview/testing marker remains: ${forbidden}`);
 }
 check(html.includes('LICENSE NOT DECLARED'), 'license boundary is missing');
